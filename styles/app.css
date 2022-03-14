@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    font-size: 12px;
+    --primary: hsl(0, 0%, 100%);
+    --secondary: hsl(0, 0%, 0%);
+}
+
+* {
+    font-family: 'Poppins', Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-weight: bold;
+}
+
+#siteMount {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+    background: var(--primary);
+
+    animation: invert 1s cubic-bezier(.91,.19,.14,.8) forwards ;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.above-centered-text {
+    font-size: 1.5em;
+    color: var(--secondary);
+    transform: translateY(-300%);
+    
+    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.centered-text {
+    font-weight: bolder;
+
+    font-size: 7em;
+    color: var(--secondary);
+    transform: translateX(-100%);
+    
+    animation: slide-in-x 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.below-centered-text {
+    font-weight: bold;
+
+    margin-left: 10em;
+    font-size: 2em;
+    color: var(--secondary);
+    transform: translateX(100%);
+    
+    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.centered-logo {
+    margin-left: 1.5em;
+    width: 6em;
+
+    animation: wobble 4s ease-in-out infinite alternate
+}
+
+.centered-logo-left {
+    transform: translateY(-100%);
+    
+    animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.centered-logo-right {
+    transform: translateY(100%);
+    
+    animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.icon-row {
+    display: flex;
+    height: 5em;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    width: 45%;
+}
+
+.icon-wrapper {
+    padding-left: 9em;
+    padding-right: 9em;
+
+    transition-duration: 200ms;
+    width: 3.5rem;
+}
+
+.icon-wrapper:hover {
+    width: 4.5rem;
+
+    padding-left: 8.5em;
+    padding-right: 8.5em;
+}
+
+.reddit-icon {
+    transform: translateX(-400%);
+    
+    animation: slide-in-x 0.9s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.twitter-icon {
+    transform: translateY(400%);
+    
+    animation: slide-in-y 0.95s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.github-icon {
+    transform: translateX(400%);
+    
+    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.top-header {
+    margin-right: 5em;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav {
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.5em;
+    color: var(--secondary);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+@keyframes slide-in-x {
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slide-in-y {
+    100% { transform: translateY(0%); }
+}
+
+@keyframes invert {
+    from {
+        background: var(--primary);
+        filter: invert(0)
+    }
+
+    to {
+        background: var(--secondary);
+        filter: invert(1)
+    }
+}
+
+@keyframes wobble {
+    from {
+        transform: rotate(-8deg);
+    }
+
+    to {
+        transform: rotate(8deg);
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .centered-text {
+        animation: slide-in-x 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+    }
+    
+    .below-centered-text {
+        animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+    }
+    
+    .centered-logo-left {
+        animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+    }
+    
+    .centered-logo-right {
+        animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+    }
+}
