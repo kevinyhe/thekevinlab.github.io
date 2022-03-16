@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>thekevinlab</title>
+    <link rel="stylesheet" href="styles/typings.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
+    <meta name="author" content="thekevinlab">
+    <meta name="description" content="curator of chaos. ui/ux designer">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="thekevinlab" />
+    <meta property="og:description" content="curator of chaos. ui/ux designer" />
+    <meta property="og:image" content="https://thekevinlab.github.io/assets/banner.png" />
+    <meta property="og:url" content="thekevinlab.github.io" />
+    <meta property="og:site_name" content="thekevinlab" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="thekevinlab" />
+    <meta property="twitter:url" content="thekevinlab.github.io" />
+    <meta property="twitter:description" content="curator of chaos. backend dev and ui/ux designer." />
+    <meta property="twitter:image" content="https://thekevinlab.github.io/assets/banner.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="siteMount">
+        <div class="navbar">
+            <a class="nav" href="/index.html">home</a>
+            <a class="nav" href="/typings.html">thekeylab</a>
+            <a class="nav" href="/">projects (wip)</a>
+            <a class="nav" href="/">contact (wip)</a>
+            <a class="nav" href="/">notebook (wip)</a>
+        </div>
+        <div class="content">
+            <div class="header">thekeylab</div>
+            <div class="typing-content">
+                <div class="typing-metrics">
+                    <div class="word-count">0/50</div>
+                    <div class="wpm">0</div>
+                    <div class="accuracy">0%</div>
+                </div>
+                
+                <div class="typing-input">
+                    <div class="text"></div>
+                    <div class="input-container">
+                        <textarea class="input-area" placeholder="start typing here..."></textarea>
+                        <button class="restart-button" onclick="reset()">redo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">hey there, this project is still in its early stages. expect some pages might look or act weird.</div>
+    </div>  
+
+    <script src="scripts/keylab.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
