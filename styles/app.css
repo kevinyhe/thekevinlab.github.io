@@ -2,13 +2,15 @@
 
 :root {
     font-size: 12px;
-    --primary: hsl(0, 0%, 100%);
-    --secondary: hsl(0, 0%, 0%);
+    --primary: hsl(0, 0%, 0%);
+    --secondary: hsl(0, 0%, 100%);
 }
 
 * {
     font-family: 'Poppins', Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     font-weight: bold;
+
+    color: var(--secondary);
 }
 
 #siteMount {
@@ -24,7 +26,8 @@
 body {
     text-rendering: optimizeLegibility;
     overflow: hidden;
-    background: var(--primary);
+    background: var(--secondary);
+    filter: invert(1);
 
     animation: invert 1s cubic-bezier(.91,.19,.14,.8) forwards ;
 }
@@ -51,7 +54,7 @@ a {
 .centered-text {
     font-weight: bolder;
 
-    font-size: 7em;
+    font-size: 9em;
     color: var(--secondary);
     transform: translateX(-100%);
     
@@ -71,7 +74,7 @@ a {
 
 .centered-logo {
     margin-left: 1.5em;
-    width: 6em;
+    width: 7em;
 
     animation: wobble 4s ease-in-out infinite alternate
 }
@@ -175,14 +178,9 @@ a {
 }
 
 @keyframes invert {
-    from {
+    to {
         background: var(--primary);
         filter: invert(0)
-    }
-
-    to {
-        background: var(--secondary);
-        filter: invert(1)
     }
 }
 
