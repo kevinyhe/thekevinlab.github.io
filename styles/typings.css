@@ -64,6 +64,9 @@ a {
 .header {
     font-size: 9em;
     margin-bottom: 0.4em;
+    transform: translateY(-100%);
+    
+    animation: slide-in-y 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
 }
 
 .word-count {
@@ -74,6 +77,9 @@ a {
 .text {
     height: 100%;
     font-size: 2em;
+    transform: translateX(100%);
+    
+    animation: slide-in-x 1.25s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
 }
 
 .text span {
@@ -88,6 +94,22 @@ a {
     padding-right: 0.2em;
 }
 
+.wpm { 
+    transform: translateX(-100%);
+    
+    animation: slide-in-x 0.9s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+.accuracy {
+    transform: translateX(-100%);
+    
+    animation: slide-in-x 0.95s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+.word-count {
+    transform: translateX(-100%);
+    
+    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
 .typing-metrics {
     display: flex;
     flex-direction: column;
@@ -98,7 +120,7 @@ a {
 
 .input-container {
     margin-top: auto;
-    padding-top: 1em;
+    padding-top: 2em;
 }
 
 .input-area {
@@ -114,12 +136,18 @@ a {
     height: 1.5em;
     resize: none;
     outline: none;
+    transform: translateY(175%);
+    
+    animation: slide-in-y 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
 }
 
 .restart-button {
     background: var(--primary);
     border: none;
     width: 8em;
+    transform: translateX(150%);
+    
+    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
 }
 
 .ichar {
