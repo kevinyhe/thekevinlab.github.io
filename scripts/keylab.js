@@ -28,6 +28,9 @@ $(document).ready(function () {
     setup();
 });
 
+async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function samples(i, n) {
     // sort the list of words and pick the first n entries
@@ -42,10 +45,13 @@ function init() {
     wpmCountTimer = setInterval(updateWpmCount, 1000);
 }
 
-function reset() {
+async function reset() {
     inputArea.removeEventListener("keydown", function () { init() });
 
-    setup()
+    textArea.classList.add("text-swap");
+    await sleep(500);
+    setup();
+    textArea.classList.remove("text-swap");
 }
 
 function setup() {

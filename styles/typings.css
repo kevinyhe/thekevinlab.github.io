@@ -77,9 +77,13 @@ a {
 .text {
     height: 100%;
     font-size: 2em;
-    transform: translateX(100%);
+    transform: translateX(150%);
     
-    animation: slide-in-x 1.25s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+    animation: slide-in-x 0.9s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.text-swap {
+    animation: text-slide-in-out 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards !important;
 }
 
 .text span {
@@ -95,17 +99,17 @@ a {
 }
 
 .wpm { 
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     
     animation: slide-in-x 0.9s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
 }
 .accuracy {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     
     animation: slide-in-x 0.95s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
 }
 .word-count {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     
     animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
 }
@@ -144,10 +148,17 @@ a {
 .restart-button {
     background: var(--primary);
     border: none;
-    width: 8em;
-    transform: translateX(150%);
+    font-size: 1.5em;
+    width: 6em;
+    transform: translateX(200%);
+    transition-duration: 200ms;
     
     animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+}
+
+.restart-button:hover {
+    width: 5.15em;
+    font-size: 1.75em;
 }
 
 .ichar {
@@ -219,20 +230,16 @@ a {
     }
 }
 
-@media (prefers-reduced-motion) {
-    .centered-text {
-        animation: slide-in-x 0.75s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+@keyframes text-slide-in-out {
+    0% {
+        transform: translateX(0%);
     }
 
-    .below-centered-text {
-        animation: slide-in-x 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    50% {
+        transform: translateX(150%);
     }
 
-    .centered-logo-left {
-        animation: slide-in-y 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-    }
-
-    .centered-logo-right {
-        animation: slide-in-y 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    100% {
+        transform: translateX(0%);
     }
 }
