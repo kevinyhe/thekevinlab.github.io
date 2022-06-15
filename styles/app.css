@@ -26,10 +26,10 @@
 body {
     text-rendering: optimizeLegibility;
     overflow: hidden;
-    background: var(--secondary);
-    filter: invert(1);
-
-    animation: invert 1s cubic-bezier(.91,.19,.14,.8) forwards ;
+    background: var(--primary);
+    animation: fade-in 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+        /* filter: invert(1); flashbang out 
+    animation: invert 1s cubic-bezier(.91,.19,.14,.8) forwards ; */
 }
 
 a {
@@ -47,8 +47,8 @@ a {
     font-size: 1.5em;
     color: var(--secondary);
     transform: translateY(-300%);
-    
-    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-x 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .centered-text {
@@ -57,8 +57,8 @@ a {
     font-size: 9em;
     color: var(--secondary);
     transform: translateX(-100%);
-    
-    animation: slide-in-x 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-x 0.75s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .below-centered-text {
@@ -68,8 +68,8 @@ a {
     font-size: 2em;
     color: var(--secondary);
     transform: translateX(100%);
-    
-    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-x 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .centered-logo {
@@ -81,14 +81,14 @@ a {
 
 .centered-logo-left {
     transform: translateY(-100%);
-    
-    animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-y 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .centered-logo-right {
     transform: translateY(100%);
-    
-    animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-y 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .icon-row {
@@ -117,20 +117,20 @@ a {
 
 .reddit-icon {
     transform: translateX(-400%);
-    
-    animation: slide-in-x 0.9s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-x 0.9s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .twitter-icon {
     transform: translateY(400%);
-    
-    animation: slide-in-y 0.95s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-y 0.95s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .github-icon {
     transform: translateX(400%);
-    
-    animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+
+    animation: slide-in-x 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .top-header {
@@ -170,19 +170,33 @@ a {
 }
 
 @keyframes slide-in-x {
-    100% { transform: translateX(0%); }
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 @keyframes slide-in-y {
-    100% { transform: translateY(0%); }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
-@keyframes invert {
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* @keyframes invert {
     to {
         background: var(--primary);
         filter: invert(0)
     }
-}
+} */
 
 @keyframes wobble {
     from {
