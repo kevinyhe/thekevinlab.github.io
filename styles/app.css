@@ -29,7 +29,7 @@ body {
     background: var(--primary);
     animation: fade-in 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
         /* filter: invert(1); flashbang out 
-    animation: invert 1s cubic-bezier(.91,.19,.14,.8) forwards ; */
+    animation: invert 1.27s cubic-bezier(.91,.19,.14,.8) forwards ; */
 }
 
 a {
@@ -44,11 +44,27 @@ a {
 }
 
 .above-centered-text {
+    display: flex;
     font-size: 1.5em;
     color: var(--secondary);
-    transform: translateY(-300%);
+    flex-direction: row;
+}
 
-    animation: slide-in-x 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+.above-centered-text-left {
+    transform: translateX(-500%);
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    padding-right: 0.5em;
+}
+
+.above-centered-text-mid {
+    transform: translateY(-400%);
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+.above-centered-text-right {
+    transform: translateX(300%);
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    padding-left: 0.5em;
 }
 
 .centered-text {
@@ -58,7 +74,7 @@ a {
     color: var(--secondary);
     transform: translateX(-100%);
 
-    animation: slide-in-x 0.75s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .below-centered-text {
@@ -69,7 +85,7 @@ a {
     color: var(--secondary);
     transform: translateX(100%);
 
-    animation: slide-in-x 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .centered-logo {
@@ -82,13 +98,13 @@ a {
 .centered-logo-left {
     transform: translateY(-100%);
 
-    animation: slide-in-y 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .centered-logo-right {
     transform: translateY(100%);
 
-    animation: slide-in-y 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .icon-row {
@@ -118,19 +134,19 @@ a {
 .reddit-icon {
     transform: translateX(-400%);
 
-    animation: slide-in-x 0.9s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 0.9s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .twitter-icon {
     transform: translateY(400%);
 
-    animation: slide-in-y 0.95s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 0.95s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .github-icon {
     transform: translateX(400%);
 
-    animation: slide-in-x 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .top-header {
@@ -149,7 +165,7 @@ a {
 }
 
 .nav {
-    padding-top: 0.5em;
+    padding-top: 0.75em;
     padding-left: 1em;
     padding-right: 1em;
     font-size: 1.5em;
@@ -169,14 +185,9 @@ a {
     font-weight: bold;
 }
 
-@keyframes slide-in-x {
+@keyframes slide-in {
     100% {
         transform: translateX(0%);
-    }
-}
-
-@keyframes slide-in-y {
-    100% {
         transform: translateY(0%);
     }
 }
@@ -200,28 +211,28 @@ a {
 
 @keyframes wobble {
     from {
-        transform: rotate(-8deg);
+        transform: rotate(-12deg);
     }
 
     to {
-        transform: rotate(8deg);
+        transform: rotate(12deg);
     }
 }
 
 /* @media (prefers-reduced-motion) {
     .centered-text {
-        animation: slide-in-x 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+        animation: slide-in 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
     }
     
     .below-centered-text {
-        animation: slide-in-x 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+        animation: slide-in 1.27s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
     }
     
     .centered-logo-left {
-        animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+        animation: slide-in 1.27s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
     }
     
     .centered-logo-right {
-        animation: slide-in-y 1s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
+        animation: slide-in 1.27s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
     }
 } */
