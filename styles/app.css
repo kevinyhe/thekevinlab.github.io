@@ -219,7 +219,7 @@ a {
     }
 }
 
-/* @media (prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
     .centered-text {
         animation: slide-in 0.75s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
     }
@@ -235,4 +235,4 @@ a {
     .centered-logo-right {
         animation: slide-in 1.27s cubic-bezier( 0.86, 0, 0.07, 1 ) forwards;
     }
-} */
+}
