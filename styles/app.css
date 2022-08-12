@@ -286,6 +286,7 @@ a {
 }
 
 .nav {
+    font-weight: bold;
     padding-top: 0.75em;
     padding-left: 1em;
     padding-right: 1em;
