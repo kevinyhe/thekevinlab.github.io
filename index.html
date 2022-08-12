@@ -21,62 +21,107 @@
     <meta property="twitter:image" content="https://thekevinlab.github.io/assets/banner.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<!-- TODO: add little svg graphics with keyboards and cameras and stuff -->
 
 <body>
     <div id="siteMount">
         <div class="navbar">
-            <a class="nav" href="/index.html">home</a>
+            <a class="nav" href="/index.html">Home</a>
             <a class="nav" href="/keylabs">keylabs</a>
             <!-- <a class="nav" href="/">projects (coming soon!)</a>
             <a class="nav" href="/">contact (wip)</a>
             <a class="nav" href="/">notebook (wip)</a> -->
         </div>
         <div class="content">
-            <div class="above-centered-text">
-                <div class="above-centered-text-left">thekevinlab</div>
-                <div class="above-centered-text-mid">/</div>
-                <div class="above-centered-text-right">synchronous</div>
+            <div class="top-header">
+                <!-- this is a really dumb way of doing it but it works ig-->
+                <div class="left-wrapper">
+                    <div class="heading">Hey, I'm Kevin.</div>
+                    <div class="title">Backend Developer.</div>
+                    <div class="title2">UI/UX Designer.</div>
+                </div>
+                <div class="middle-line"></div>
+                <div class="right-wrapper">
+                    <svg class="logo" viewBox="0 -200 889 1120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- <g class="logo-left">
+                            <path d="M5.5 252L234 725L403 641L574 160.5L485 5L310.5 299L5.5 252Z" fill="var(--purpleish)"
+                            stroke-width="25" stroke-linejoin="round" />
+                        </g>
+                        <g class="logo-right">
+                            <path d="M673 331.5L599 211.5L451 622.5L815 437.5L894.5 249.5L673 331.5Z"
+                            fill="var(--purpleish)" stroke-width="25" stroke-linejoin="round" />
+                        </g> -->
+                        <g class="logo-left">
+                            <path d="M5.5 252L234 725L403 641L574 160.5L485 5L310.5 299L5.5 252Z"
+                                fill="url(#leftgradient)" stroke-width="5" stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="leftgradient" x1="-400" y1="854" x2="400" y2="166"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00FFEE" />
+                                    <stop offset="1" stop-color="#6D4CFF" />
+                                </linearGradient>
+                            </defs>
+                        </g>
+                        <g class="logo-right">
+                            <path d="M673 331.5L599 211.5L451 622.5L815 437.5L894.5 249.5L673 331.5Z"
+                            fill="url(#rightgradient)" stroke-width="5" stroke-linejoin="round" border-radius />
+                            <defs>
+                                <linearGradient id="rightgradient" x1="-400" y1="854" x2="400" y2="166"
+                                gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00FFEE" />
+                                    <stop offset="1" stop-color="#6D4CFF" />
+                                </linearGradient>
+                            </defs>
+                        </g>
+                    </svg>
+                    <!-- <div class="tags hidden">
+                        <div class="tags-left">Kevin He</div>
+                        <div class="tags-mid">/</div>
+                        <div class="tags-right">thekevinlab</div>
+                    </div> -->
+                </div>
             </div>
-            <div class="top-header"> <!-- this is a really dumb way of doing it but it works ig-->
-                <div class="centered-text">creating the future.</div>
-                <svg class="centered-logo" viewBox="0 50 900 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g class="centered-logo-left">
-                        <path d="M5.5 252L234 725L403 641L574 160.5L485 5L310.5 299L5.5 252Z" fill="var(--secondary)" stroke-width="25" stroke-linejoin="round"/>
-                    </g>
-                    <g class="centered-logo-right">
-                        <path d="M673 331.5L599 211.5L451 622.5L815 437.5L894.5 249.5L673 331.5Z" fill="var(--secondary)" stroke-width="25" stroke-linejoin="round"/>
-                    </g>
-                </svg>
-            </div>
-            <div class="below-centered-text">curator of chaos. backend dev and ui/ux designer.</div>
+            <div class="below-text hidden">Backend developer and UI/UX designer.</div>
+            <div class="icebreakers-text hidden">keeb enthusiast. avid photographer and absolute nutcase.</div>
+            <div class="below-icebreakers-text hidden">check out my socials below if you want to.</div>
             <div class="icon-row">
-                <a href="https://www.reddit.com/user/synce_d" target="_blank" rel="noreferrer noopener" >
+                <a href="https://www.reddit.com/user/synce_d" target="_blank" rel="noreferrer noopener">
                     <div class="icon-wrapper">
                         <svg class="reddit-icon" viewBox="0 0 300 292" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="7.5" y1="-7.5" x2="95.5119" y2="-7.5" transform="matrix(0.196204 -0.980563 0.977414 0.211335 154 103.01)" stroke="var(--secondary)" stroke-width="15" stroke-linecap="round"/>
-                            <path d="M235.825 26.053L167.487 8.00963" stroke="var(--secondary)" stroke-width="15" stroke-linecap="round"/>
-                            <ellipse rx="148.5" ry="108.5" transform="matrix(1 0 0 -1 149.5 183.5)" fill="var(--secondary)"/>
-           S                 <circle cx="96.5" cy="167.5" r="17.5" fill="var(--primary)"/>
-                            <circle cx="203.5" cy="166.5" r="17.5" fill="var(--primary)"/>
-                            <path d="M96 216C117.6 237.536 183.215 237.13 204 216" stroke="var(--primary)" stroke-width="15" stroke-linecap="round"/>
-                            <circle cx="37.5" cy="121.5" r="37.5" fill="var(--secondary)"/>
-                            <circle cx="262.5" cy="121.5" r="37.5" fill="var(--secondary)"/>
-                            <circle cx="243" cy="28.0096" r="20" fill="var(--secondary)"/>
+                            <line x1="7.5" y1="-7.5" x2="95.5119" y2="-7.5"
+                                transform="matrix(0.196204 -0.980563 0.977414 0.211335 154 103.01)"
+                                stroke="var(--light-purpleish)" stroke-width="15" stroke-linecap="round" />
+                            <path d="M235.825 26.053L167.487 8.00963" stroke="var(--light-purpleish)" stroke-width="15"
+                                stroke-linecap="round" />
+                            <ellipse rx="148.5" ry="108.5" transform="matrix(1 0 0 -1 149.5 183.5)"
+                                fill="var(--light-purpleish)" />
+                            S
+                            <circle cx="96.5" cy="167.5" r="17.5" fill="var(--dark-purpleish)" />
+                            <circle cx="203.5" cy="166.5" r="17.5" fill="var(--dark-purpleish)" />
+                            <path d="M96 216C117.6 237.536 183.215 237.13 204 216" stroke="var(--dark-purpleish)"
+                                stroke-width="15" stroke-linecap="round" />
+                            <circle cx="37.5" cy="121.5" r="37.5" fill="var(--light-purpleish)" />
+                            <circle cx="262.5" cy="121.5" r="37.5" fill="var(--light-purpleish)" />
+                            <circle cx="243" cy="28.0096" r="20" fill="var(--light-purpleish)" />
                         </svg>
                     </div>
                 </a>
-                <a href="https://twitter.com/thekevinlab" target="_blank" rel="noreferrer noopener" >
+                <a href="https://twitter.com/thekevinlab" target="_blank" rel="noreferrer noopener">
                     <div class="icon-wrapper">
                         <svg class="twitter-icon" viewBox="0 0 580 436" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M556 113C556 113 481.423 131.932 481.423 123C481.423 63.9149 442.088 0 371.091 0C300.093 0 255.5 58 255.5 134C180.042 156.995 131.248 118.099 77 51.5677C56.681 256.445 197.5 288.5 197.5 288.5C132.5 370 100 379.5 0 386.188C48.6643 417.388 106.485 435.589 168.572 435.589C285.5 435.589 473 354 481.423 186.5C506 176 543.5 131.432 556 113Z" fill="var(--secondary)"/>
+                            <path
+                                d="M556 113C556 113 481.423 131.932 481.423 123C481.423 63.9149 442.088 0 371.091 0C300.093 0 255.5 58 255.5 134C180.042 156.995 131.248 118.099 77 51.5677C56.681 256.445 197.5 288.5 197.5 288.5C132.5 370 100 379.5 0 386.188C48.6643 417.388 106.485 435.589 168.572 435.589C285.5 435.589 473 354 481.423 186.5C506 176 543.5 131.432 556 113Z"
+                                fill="var(--light-purpleish)" />
                         </svg>
                     </div>
                 </a>
-                <a href="https://github.com/thekevinlab" target="_blank" rel="noreferrer noopener" >
+                <a href="https://github.com/thekevinlab" target="_blank" rel="noreferrer noopener">
                     <div class="icon-wrapper">
                         <svg class="github-icon" viewBox="0 0 530 530" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="260" cy="259" r="254" fill="var(--primary)"/>
-                            <path d="M259 0C115.989 0 0 115.967 0 259C0 373.435 74.2035 470.517 177.134 504.769C190.063 507.165 194.25 499.136 194.25 492.316V444.099C122.205 459.768 107.204 413.537 107.204 413.537C95.4199 383.601 78.4338 375.636 78.4338 375.636C54.9296 359.557 80.2253 359.902 80.2253 359.902C106.233 361.715 119.917 386.601 119.917 386.601C143.011 426.185 180.501 414.745 195.286 408.119C197.595 391.392 204.308 379.953 211.733 373.5C154.213 366.917 93.7364 344.707 93.7364 245.489C93.7364 217.193 103.859 194.099 120.413 175.969C117.737 169.429 108.866 143.076 122.939 107.42C122.939 107.42 144.695 100.47 194.185 133.968C214.841 128.227 236.985 125.356 259 125.248C281.015 125.356 303.181 128.227 323.88 133.968C373.327 100.47 395.04 107.42 395.04 107.42C409.134 143.098 400.263 169.451 397.587 175.969C414.206 194.099 424.242 217.215 424.242 245.489C424.242 344.966 363.658 366.874 305.987 373.284C315.268 381.313 323.75 397.069 323.75 421.242V492.316C323.75 499.201 327.894 507.295 341.038 504.748C443.883 470.452 518 373.392 518 259C518 115.967 402.033 0 259 0Z" fill="var(--secondary)"/>
+                            <circle cx="260" cy="259" r="254" fill="var(--dark-purpleish)" />
+                            <path
+                                d="M259 0C115.989 0 0 115.967 0 259C0 373.435 74.2035 470.517 177.134 504.769C190.063 507.165 194.25 499.136 194.25 492.316V444.099C122.205 459.768 107.204 413.537 107.204 413.537C95.4199 383.601 78.4338 375.636 78.4338 375.636C54.9296 359.557 80.2253 359.902 80.2253 359.902C106.233 361.715 119.917 386.601 119.917 386.601C143.011 426.185 180.501 414.745 195.286 408.119C197.595 391.392 204.308 379.953 211.733 373.5C154.213 366.917 93.7364 344.707 93.7364 245.489C93.7364 217.193 103.859 194.099 120.413 175.969C117.737 169.429 108.866 143.076 122.939 107.42C122.939 107.42 144.695 100.47 194.185 133.968C214.841 128.227 236.985 125.356 259 125.248C281.015 125.356 303.181 128.227 323.88 133.968C373.327 100.47 395.04 107.42 395.04 107.42C409.134 143.098 400.263 169.451 397.587 175.969C414.206 194.099 424.242 217.215 424.242 245.489C424.242 344.966 363.658 366.874 305.987 373.284C315.268 381.313 323.75 397.069 323.75 421.242V492.316C323.75 499.201 327.894 507.295 341.038 504.748C443.883 470.452 518 373.392 518 259C518 115.967 402.033 0 259 0Z"
+                                fill="var(--light-purpleish)" />
                         </svg>
                     </div>
                 </a>
