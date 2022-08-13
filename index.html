@@ -25,66 +25,58 @@
 
 <body>
     <div id="siteMount">
-        <div class="navbar">
+        <!-- <nav class="navbar">
             <a class="nav" href="/index.html">Home</a>
             <a class="nav" href="/keylabs">keylabs</a>
-            <!-- <a class="nav" href="/">projects (coming soon!)</a>
-            <a class="nav" href="/">contact (wip)</a>
-            <a class="nav" href="/">notebook (wip)</a> -->
-        </div>
-        <div class="content">
-            <div class="top-header">
+        </nav> -->
+        <main class="content">
+            <div class="header-container">
                 <!-- this is a really dumb way of doing it but it works ig-->
-                <div class="left-wrapper">
-                    <div class="heading">Curator of chaos.</div>
-                    <div class="title">Backend Developer.</div>
-                    <div class="title2">UI/UX Designer.</div>
-                </div>
-                <div class="middle-line"></div>
-                <div class="right-wrapper">
-                    <svg class="logo" viewBox="0 -200 889 1120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- <g class="logo-left">
-                            <path d="M5.5 252L234 725L403 641L574 160.5L485 5L310.5 299L5.5 252Z" fill="var(--purpleish)"
-                            stroke-width="25" stroke-linejoin="round" />
-                        </g>
-                        <g class="logo-right">
-                            <path d="M673 331.5L599 211.5L451 622.5L815 437.5L894.5 249.5L673 331.5Z"
-                            fill="var(--purpleish)" stroke-width="25" stroke-linejoin="round" />
-                        </g> -->
-                        <g class="logo-left">
-                            <path d="M5.5 252L234 725L403 641L574 160.5L485 5L310.5 299L5.5 252Z"
-                                fill="url(#leftgradient)" stroke-width="5" stroke-linejoin="round" />
+                <section class="header-wrapper">
+                    <section class="left-wrapper">
+                        <h4 class="heading">Curator of chaos.</h4>
+                        <h1 class="title">Backend Developer.</h1>
+                        <h1 class="title2">UI/UX Designer.</h1>
+                    </section>
+                    <div class="middle-line"></div>
+                    <section class="right-wrapper">
+                        <svg class="logo" viewBox="0 -400 889 1920" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g class="logo-left">
+                                <path class="left-path" d="M5.5 252L234 725L403 641L574 160.5L485 5L310.5 299L5.5 252Z"
+                                    fill="url(#leftgradient)" stroke-width="5" stroke-linejoin="round" />
                                 <defs>
                                     <linearGradient id="leftgradient" x1="-400" y1="854" x2="400" y2="166"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#00FFEE" />
-                                    <stop offset="1" stop-color="#6D4CFF" />
-                                </linearGradient>
-                            </defs>
-                        </g>
-                        <g class="logo-right">
-                            <path d="M673 331.5L599 211.5L451 622.5L815 437.5L894.5 249.5L673 331.5Z"
-                            fill="url(#rightgradient)" stroke-width="5" stroke-linejoin="round" border-radius />
-                            <defs>
-                                <linearGradient id="rightgradient" x1="-400" y1="854" x2="400" y2="166"
-                                gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#00FFEE" />
-                                    <stop offset="1" stop-color="#6D4CFF" />
-                                </linearGradient>
-                            </defs>
-                        </g>
-                    </svg>
-                    <!-- <div class="tags hidden">
-                        <div class="tags-left">Kevin He</div>
-                        <div class="tags-mid">/</div>
-                        <div class="tags-right">thekevinlab</div>
-                    </div> -->
-                </div>
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00FFEE" />
+                                        <stop offset="1" stop-color="#6D4CFF" />
+                                    </linearGradient>
+                                </defs>
+                            </g>
+                            <g class="logo-right">
+                                <path class="right-path" d="M673 331.5L599 211.5L451 622.5L815 437.5L894.5 249.5L673 331.5Z"
+                                    fill="url(#rightgradient)" stroke-width="5" stroke-linejoin="round" border-radius />
+                                <defs>
+                                    <linearGradient id="rightgradient" x1="-400" y1="854" x2="400" y2="166"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00FFEE" />
+                                        <stop offset="1" stop-color="#6D4CFF" />
+                                    </linearGradient>
+                                </defs>
+                            </g>
+                        </svg>
+                    </section>
+                </section>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" class="arrows"
+                    enable-background="new 0 0 26.8 33" viewBox="0 0 26.8 33">
+                    <path d="M1.5 21.5L14 31.5 25.3 21.5" class="a1" stroke="var(--light-purpleish)" stroke-width="0.2em"></path>
+                    <path d="M1.5 11.5L14 21.5 25.3 11.5" class="a2" stroke="var(--light-blueish)" stroke-width="0.2em"></path>
+                    <path d="M1.5 1.5L14 11.5 25.3 1.5" class="a3" stroke="var(--light-aquamarine)" stroke-width="0.2em"></path>
+                </svg>
             </div>
-            <div class="below-text hidden">Backend developer and UI/UX designer.</div>
+            <!-- <div class="below-text hidden">Backend developer and UI/UX designer.</div>
             <div class="icebreakers-text hidden">keeb enthusiast. avid photographer and absolute nutcase.</div>
-            <div class="below-icebreakers-text hidden">check out my socials below if you want to.</div>
-            <div class="icon-row">
+            <div class="below-icebreakers-text hidden">check out my socials below if you want to.</div> -->
+            <!-- <div class="icon-row">
                 <a href="https://www.reddit.com/user/synce_d" target="_blank" rel="noreferrer noopener">
                     <div class="icon-wrapper">
                         <svg class="reddit-icon" viewBox="0 0 300 292" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,12 +117,16 @@
                         </svg>
                     </div>
                 </a>
-            </div>
-        </div>
+            </div> -->
+        </main>
         <!-- <div class="footer">hey there, this project is still in its early stages. expect some pages might look or act weird.</div> -->
     </div>
 
     <script src="scripts/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
 </body>
 
 </html>

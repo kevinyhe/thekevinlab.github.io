@@ -6,11 +6,12 @@
     --white: hsl(0, 0%, 100%);
     --aquamarine: hsl(176, 100%, 50%);
     --light-aquamarine: hsl(176, 100%, 92%);
-    --grey-aquamarine: hsl(176, 5%, 50%);
+    --blueish: hsl(196, 75%, 50%);
+    --light-blueish: hsl(196, 75%, 87%);
     /* --light-purpleish: hsl(176, 100%, 98%); */
     --light-purpleish: hsl(251, 100%, 92%);
     --purpleish: hsl(251, 100%, 65%);
-    --dark-purpleish: hsl(251, 100%, 6%);
+    --dark-purpleish: hsl(251, 100%, 8%);
     --dark-aquamarine: hsl(176, 100%, 2%);
 }
 
@@ -34,13 +35,15 @@
 body {
     text-rendering: optimizeLegibility;
     overflow: hidden;
-    background: linear-gradient(25deg, var(--dark-aquamarine), var(--dark-purpleish));
+    background: linear-gradient(25deg, var(--dark-aquamarine) 40%, var(--dark-purpleish));
     animation: fade-in 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
     /* filter: invert(1); flashbang out 
     animation: invert 1.27s cubic-bezier(.91,.19,.14,.8) forwards ; */
 }
 
-a {
+a, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
 }
 
@@ -133,7 +136,7 @@ a {
     color: var(--light-purpleish);
     transform: translateX(175%);
 
-    animation: slide-in 1.57s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 1.97s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .title {
@@ -149,9 +152,9 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: translateX(175%);
+    transform: translateX(125%);
 
-    animation: slide-in 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 3s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .title2 {
@@ -164,49 +167,14 @@ a {
     line-height: 100%;
     padding-bottom: 0.18em;
     text-align: right;
-    background: linear-gradient(50deg, var(--light-aquamarine), var(--light-purpleish));
+    background: linear-gradient(50deg, var(--light-aquamarine) 40%, var(--light-purpleish));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: translateX(150%);
-
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
-
-.description {
-    font-weight: normal;
-
-    margin-top: 0.2em;
-    margin-left: 10em;
-    font-size: 2em;
-    color: var(--light-purpleish);
-    transform: translateX(100%);
-
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
-
-.icebreakers {
-    font-weight: normal;
-
-    margin-top: 0.05em;
-    margin-left: 12em;
-    font-size: 1.5em;
-    color: var(--light-purpleish);
-    transform: translateX(-25%);
-
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
-
-.below-icebreakers {
-    font-weight: normal;
-
-    margin-top: 0.05em;
-    margin-left: 2em;
-    font-size: 1.27em;
-    color: var(--light-purpleish);
-    transform: translateX(150%);
-
-    animation: slide-in 1.57s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    
+    animation-duration: cubic-bezier(0.86, 0, 0.07, 1);
+    animation: slide-in 4.27s forwards;
 }
 
 .logo {
@@ -217,15 +185,29 @@ a {
 }
 
 .logo-left {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
 
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards, bounce-1 2s cubic-bezier(0.93, 0.02, 0.2, 1) alternate infinite;
+    animation: slide-in 2.77s cubic-bezier(0.66, -0.09, 0.31, 1.03) forwards;
 }
 
 .logo-right {
-    transform: translateY(100%);
+    transform: translateY(50%);
 
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards, bounce-2 2s cubic-bezier(0.93, 0.02, 0.2, 1) alternate infinite;
+    animation: slide-in 3.27s cubic-bezier(0.66, -0.09, 0.31, 1.03) forwards;
+}
+
+.left-path {
+    animation: bounce-y1 4s -4s cubic-bezier(0.93, 0.02, 0.2, 1) alternate infinite;
+}
+
+.right-path {
+    animation: bounce-y2 4s -4s cubic-bezier(0.93, 0.02, 0.2, 1) alternate infinite;
+}
+
+.middle-line {
+    transform: translateY(-100%);
+
+    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .icon-row {
@@ -266,14 +248,45 @@ a {
 
 .github-icon {
     transform: translateX(400%);
-
+    
     animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
-.top-header {
-    margin-right: 5em;
+.arrows {
+    margin-top: 2em;
+    width: 3em;
+    transform: translateY(400%);
+    animation: slide-in 5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+.a1, .a2, .a3 {
+    opacity: 0.2;
+    transform: translateY(100%);
+    animation: slide-in 2s cubic-bezier(0.86, 0, 0.07, 1) forwards, arrows 2s infinite;
+}
+
+.a2 {
+    animation-delay: -0.1s;
+}
+
+.a3 {
+    animation-delay: -0.2s;
+}
+
+.header-container {
+    /* margin-right: 5em; */
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-wrapper {
+    /* margin-right: 5em; */
     display: flex;
     flex-direction: row;
+    overflow: visible;
 }
 
 .navbar {
@@ -294,6 +307,7 @@ a {
     color: var(--light-purpleish);
 }
 
+
 .footer {
     position: fixed;
     left: 0;
@@ -308,27 +322,43 @@ a {
 }
 
 @keyframes slide-in {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.1
+    }
     100% {
+        opacity: 1;
         transform: translateX(0%);
         transform: translateY(0%);
     }
 }
 
-@keyframes bounce-1 {
+@keyframes bounce-y1 {
     from {
         transform: translate(0%, 0%);
     }
     to {
-        transform: translate(0%, -15%);
+        transform: translate(0%, -10%);
     }
 }
 
-@keyframes bounce-2 {
+@keyframes bounce-y2 {
     from {
         transform: translate(0%, 0%);
     }
     to {
-        transform: translate(0%, 15%);
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes bounce-x {
+    from {
+        transform: translate(-5%, 0%);
+    }
+    to {
+        transform: translate(5%, 0%);
     }
 }
 
@@ -342,7 +372,17 @@ a {
     }
 }
 
-@keyframes title-color {
+@keyframes arrows {
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.1;
+    }
+}
+
+/* @keyframes title-color {
     from {
         background: linear-gradient(25deg, var(--aquamarine), var(--purpleish));
         background-clip: text;
@@ -355,15 +395,15 @@ a {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-}
+} */
 
 @keyframes wobble {
     from {
-        transform: rotate(-12deg);
+        transform: rotate(-6deg);
     }
 
     to {
-        transform: rotate(12deg);
+        transform: rotate(18deg);
     }
 }
 
