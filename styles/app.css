@@ -10,6 +10,7 @@
     --light-blueish: hsl(196, 75%, 87%);
     /* --light-purpleish: hsl(176, 100%, 98%); */
     --light-purpleish: hsl(251, 100%, 92%);
+    --drop-purpleish: hsla(251, 100%, 92%, 0.1);
     --purpleish: hsl(251, 100%, 65%);
     --dark-purpleish: hsl(251, 100%, 8%);
     --dark-aquamarine: hsl(176, 100%, 2%);
@@ -19,14 +20,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Inter', Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     /* font-weight: bold; */
 
-    color: var(--dark-purpleish);
+    color: var(--light-purpleish);
 }
 
 #siteMount {
-    width: 100vw;
-    height: 100vh;
-
     display: flex;
+    /* overflow: hidden; */
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -34,9 +33,11 @@
 
 body {
     text-rendering: optimizeLegibility;
-    overflow: hidden;
     background: linear-gradient(25deg, var(--dark-aquamarine) 40%, var(--dark-purpleish));
-    animation: fade-in 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background: var(--dark-aquamarine); */
+    /* animation: fade-in 1.5s cubic-bezier(0.86, 0, 0.07, 1) forwards; */
     /* filter: invert(1); flashbang out 
     animation: invert 1.27s cubic-bezier(.91,.19,.14,.8) forwards ; */
 }
@@ -47,27 +48,27 @@ a, h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
-::-webkit-resizer {
-    background-color: #f0f3f8;
+body::-webkit-resizer {
+    background-color: var(--light-purpleish);
 }
 
-::-webkit-scrollbar {
-    width: 4px;
-    height: 3px;
+body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.4em;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     height: 50px;
-    background-color: #f0f3f8;
+    background-color: var(--light-purpleish);
     border-radius: 16px;
 }
 
-::-webkit-scrollbar-track {
-    background-color: transparent;
+body::-webkit-scrollbar-track {
+    background-color: var(--dark-aquamarine);
 }
 
-::-webkit-scrollbar-track-piece {
-    background-color: transparent;
+body::-webkit-scrollbar-track-piece {
+    background-color: var(--dark-aquamarine);
 }
 
 .content {
@@ -75,6 +76,24 @@ a, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: visible;
+}
+
+.header-container {
+    /* margin-right: 5em; */
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-wrapper {
+    /* margin-right: 5em; */
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
 }
 
 .tags {
@@ -87,27 +106,23 @@ a, h1, h2, h3, h4, h5, h6 {
 .tags-left {
     color: var(--light-purpleish);
     transform: translateY(500%);
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
     padding-right: 0.5em;
 }
 
 .tags-mid {
     color: var(--light-purpleish);
     transform: translateY(-400%);
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .tags-right {
     color: var(--light-purpleish);
-    transform: translateX(300%);
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
     padding-left: 0.5em;
 }
 
 .left-wrapper {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* justify-content: center; */
     align-items: flex-end;
     padding-right: 4em;
@@ -134,9 +149,7 @@ a, h1, h2, h3, h4, h5, h6 {
     line-height: 100%;
     text-align: right;
     color: var(--light-purpleish);
-    transform: translateX(175%);
 
-    animation: slide-in 1.97s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .title {
@@ -152,9 +165,7 @@ a, h1, h2, h3, h4, h5, h6 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: translateX(125%);
 
-    animation: slide-in 3s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .title2 {
@@ -171,29 +182,23 @@ a, h1, h2, h3, h4, h5, h6 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: translateX(150%);
-    
-    animation: slide-in cubic-bezier(0.86, 0, 0.07, 1) 4.27s forwards;
+
 }
 
 .logo {
     margin-left: 4em;
     width: 20em;
+    overflow: visible;
 
     animation: wobble 4s ease-in-out infinite alternate
 }
 
-.logo-left {
-    transform: translateY(-50%);
-
-    animation: slide-in 2.77s cubic-bezier(0.66, -0.09, 0.31, 1.03) forwards;
+/* .logo-left {
 }
 
 .logo-right {
-    transform: translateY(50%);
 
-    animation: slide-in 3.27s cubic-bezier(0.66, -0.09, 0.31, 1.03) forwards;
-}
+} */
 
 .left-path {
     animation: bounce-y1 4s -4s cubic-bezier(0.93, 0.02, 0.2, 1) alternate infinite;
@@ -201,12 +206,6 @@ a, h1, h2, h3, h4, h5, h6 {
 
 .right-path {
     animation: bounce-y2 4s -4s cubic-bezier(0.93, 0.02, 0.2, 1) alternate infinite;
-}
-
-.middle-line {
-    transform: translateY(-100%);
-
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .icon-row {
@@ -234,34 +233,28 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 
 .reddit-icon {
-    transform: translateX(-400%);
 
-    animation: slide-in 0.9s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .twitter-icon {
-    transform: translateY(400%);
 
-    animation: slide-in 0.95s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .github-icon {
-    transform: translateX(400%);
-    
-    animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+
 }
 
 .arrows {
-    margin-top: 2em;
+    margin-top: 3em;
     width: 3em;
     transform: translateY(400%);
-    animation: slide-in 5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: slide-in 1s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .a1, .a2, .a3 {
     opacity: 0.2;
     transform: translateY(100%);
-    animation: slide-in 2s cubic-bezier(0.86, 0, 0.07, 1) forwards, arrows 2s infinite;
+    animation: slide-in 0.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, arrows 2s infinite;
 }
 
 .a2 {
@@ -270,22 +263,6 @@ a, h1, h2, h3, h4, h5, h6 {
 
 .a3 {
     animation-delay: -0.2s;
-}
-
-.header-container {
-    /* margin-right: 5em; */
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-wrapper {
-    /* margin-right: 5em; */
-    display: flex;
-    flex-direction: row;
-    overflow: visible;
 }
 
 .navbar {
@@ -320,16 +297,40 @@ a, h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+/* .noise {
+    position: fixed;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: noise-background .2s infinite;
+  }
+  
+  @keyframes noise-background {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  } */
+
 @keyframes slide-in {
     0% {
         opacity: 0;
     }
+
     30% {
         opacity: 0.1
     }
+
     100% {
         opacity: 1;
-        transform: translateX(0%);
         transform: translateY(0%);
     }
 }
@@ -338,6 +339,7 @@ a, h1, h2, h3, h4, h5, h6 {
     from {
         transform: translate(0%, 0%);
     }
+
     to {
         transform: translate(0%, -10%);
     }
@@ -347,6 +349,7 @@ a, h1, h2, h3, h4, h5, h6 {
     from {
         transform: translate(0%, 0%);
     }
+
     to {
         transform: translate(0%, 10%);
     }
@@ -356,6 +359,7 @@ a, h1, h2, h3, h4, h5, h6 {
     from {
         transform: translate(-5%, 0%);
     }
+
     to {
         transform: translate(5%, 0%);
     }
@@ -411,19 +415,7 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 
 @media (prefers-reduced-motion) {
-    .title {
-        animation: slide-in 0.75s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-    }
-
-    .description {
-        animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-    }
-
-    .logo-left {
-        animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-    }
-
-    .logo-right {
-        animation: slide-in 1.27s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    * {
+        animation: none;
     }
 }
