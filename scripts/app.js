@@ -36,7 +36,7 @@ function createScrollTrigger(element, trigger, scrub, x, y, rotation) {
 			start: "top 150px",
 			end: "top -200px",
 			scrub: scrub,
-			markers: true,
+			markers: false,
 		},
 		x: x,
 		y: y,
