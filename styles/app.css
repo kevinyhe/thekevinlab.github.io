@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root {
-    font-size: 12px;
+    font-size: 10px;
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --aquamarine: hsl(176, 100%, 50%);
